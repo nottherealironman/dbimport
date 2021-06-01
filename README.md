@@ -1,13 +1,13 @@
 A bash script to automatically import database from the remote server to local machine.
 
-##Steps to execute the script
+## teps to execute the script
 
-###Make bash script executable
+### Make bash script executable
 ```bash
 chmod u+x dbimport
 ```
 
-###Execute the script
+### Execute the script
 ```bash
 ./dbimport
 ```
