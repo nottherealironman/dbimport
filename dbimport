@@ -1,0 +1,16 @@
+#!/bin/bash
+MYSQL_USER=your_mysql_username
+MYSQL_PASS=your_mysql_password
+
+echo "--SSH into remote server--"
+ssh -i your_private_key username@hostname /bin/bash << EOF
+mysqldump --user=$MYSQL_USER --password=$MYSQL_PASS --host=your_remote_rds_hostname database_name_on_server > databse_name.sql --single-transaction --no-tablespaces
+EOF
+echo "Mysql dump completed!"
+
+echo "Downloading file to local system.."
+scp -i your_private_key username@hostname:databse_name.sql local_path
+echo "File downloaded"
+echo "Importing into database.."
+mysql --user=your_local_mysql_username --password=your_local_mysql_password --host=localhost your_local_database < path/to/database.sql
+echo "DB import successfull!"
