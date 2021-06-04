@@ -12,4 +12,4 @@ chmod u+x dbimport
 ./dbimport
 ```
 
-Please, read <a href="https://abhishekejam.com/">this</a> article to get more insight on how the script works.
+Please, read <a href="https://abhishekejam.com/articles/automatically-sync-database-from-remote-aws-rds-instance-to-local-mysql-server">this</a> article to get more insight on how the script works.
